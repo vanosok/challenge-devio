@@ -12,6 +12,8 @@ try {
     } else {
         $resume = $order->getResumeOrder();
 
+        if ($resume == null) throw new Exception("Não existe nenhum pedido pendente", 400);
+        
         foreach ($resume as $item) {
             $orderId = $item['order_id'];
             if (isset($newArray[$orderId])) {
