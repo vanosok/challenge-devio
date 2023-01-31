@@ -60,7 +60,7 @@ class Utils
  
     function createPDF($order_data, $name_printer = null)
     {
-        require 'C:\Users\PC-GAMER\Desktop\Projeto devio\api\lib\fdpf\fpdf.php';
+        require 'C:\Users\PC-GAMER\Documents\GitHub\challenge-devio\api\lib\fdpf\fpdf.php';
 
         $pdf = new FPDF();
         $pdf->AddPage();
