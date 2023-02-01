@@ -29,7 +29,7 @@ class Product
 
     public static function list()
     {
-        $query = "SELECT name, description, value FROM product;";
+        $query = "SELECT name, description, value, id FROM product;";
 
         $conn = Db::Connect();
         $val = $conn->prepare($query);
@@ -48,21 +48,21 @@ class Product
         $val = $conn->prepare($query);
         $val->bindValue(':id', $product_id);
         $val->execute();
-        $row = $val->fetch(PDO::FETCH_ASSOC);
+        $row = $val->fetchAll(PDO::FETCH_ASSOC);
         return $row;
     }
 
     public static function findProductByName($product_name)
     {
-        $query = "SELECT name, description, value 
-        FROM product          
-        WHERE name = :product_name;";
+        $query = "SELECT name, description, value
+        FROM product
+        WHERE name LIKE '%' || :product_name || '%';";
 
         $conn = Db::Connect();
         $val = $conn->prepare($query);
         $val->bindValue(':product_name', $product_name);
         $val->execute();
-        $row = $val->fetch(PDO::FETCH_ASSOC);
+        $row = $val->fetchAll(PDO::FETCH_ASSOC);
         return $row;
     }
 

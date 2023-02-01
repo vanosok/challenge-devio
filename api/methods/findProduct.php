@@ -5,9 +5,10 @@ try {
     } else if (isset($body['data']['product_name'])) {
         $list = Product::findProductByName($body['data']['product_name']);
     } else {
-        throw new Exception("Error find product!", 400);
+        throw new Exception("Nenhum produto foi encontrado!", 400);
     }
 
+    if ($list == null) throw new Exception("Nenhum produto foi encontrado!", 400);
     $return = array(
         'status' => 'success',
         'data' => $list
