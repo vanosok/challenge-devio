@@ -8,8 +8,8 @@ define('DB1_DRIVE', 'pgsql');
 define('DB1_HOSTNAME', 'localhost');
 define('DB1_PORT', '5432');
 define('DB1_DATABASE', 'projetodevio');
-define('DB1_USERNAME', 'postgres');
-define('DB1_PASSWORD', '');
+define('DB1_USERNAME', 'vanosok');
+define('DB1_PASSWORD', '123vi123vi');
 
 //Devel
 define('DB2_DRIVE', 'pgsql');
