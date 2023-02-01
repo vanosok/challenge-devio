@@ -9,7 +9,7 @@ define('DB1_HOSTNAME', 'localhost');
 define('DB1_PORT', '5432');
 define('DB1_DATABASE', 'projetodevio');
 define('DB1_USERNAME', 'postgres');
-define('DB1_PASSWORD', '16121997vi');
+define('DB1_PASSWORD', '');
 
 //Devel
 define('DB2_DRIVE', 'pgsql');
